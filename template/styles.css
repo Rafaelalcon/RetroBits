@@ -1,382 +1,543 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins&family=Roboto&display=swap');
-
-/* root styling */
-
-:root{
-    --light : #f8f9fa;
-    --secondary: #adb5bd;
-    --dark: #343a40;
-    --primary-color: #f15bb5;
-    --secondary-color: #2ec4b6;
-    --border : #e9ecef;
+@import url("https://fonts.googleapis.com/css?family=Press Start 2P");
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
+@import url("https://fonts.googleapis.com/css?family=Plus Jakarta Sans");
+:root {
+  --light: #f8f9fa;
+  --secondary: #33AB28;
+  --dark: #343a40;
+  --primary-color: #50BD35;
+  --secondary-color: #2ec4b6;
+  --border: #e9ecef;
 }
 
-body{
-    font-family: 'Roboto', sans-serif;
-    padding: 0;
-    margin: 0;
+body {
+  background-color: #33AB28;
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-* > *{
-    box-sizing: border-box;
+* > * {
+  box-sizing: border-box;
 }
 
 /* global styling */
-.text-light{
-    color: var(--light);
+.text-light {
+  color: var(--light);
 }
 
-.text-secondary{
-    color: var(--secondary);
+.text-secondary {
+  color: var(--secondary);
 }
 
-.text-dark{
-    color: var(--dark);
+.text-dark {
+  color: var(--dark);
 }
 
-.text-primary{
-    color: var(--primary-color);
+.bg-light {
+  background-color: black;
 }
 
-.bg-light{
-    background-color: var(--light);
+.container {
+  max-width: 1500px;
+  padding: 0 15px;
+  margin: auto;
+  margin-left: 5%;
 }
 
-.container{
-    max-width: 1200px;
-    padding: 0 15px;
-    margin: auto;
+.img-fluid {
+  width: 45%;
+  height: 500px;
+  margin-left: 34%;
 }
 
-.img-fluid{
-    width: 100%;
+.logo {
+  position: absolute;
+  width: 7%;
+  height: 70%;
+  left: 74px;
+  top: 18px;
 }
 
-.text-title{
-    font-family: 'DM Sans', sans-serif;
-    font-weight: bold;
+.secondary-title {
+  font-family: "Poppins", sans-serif;
 }
 
-.secondary-title{
-    font-family: 'Poppins' , sans-serif;
+.text-center {
+  text-align: center;
 }
 
-.display-1{
-    font-size: 22px;
+.text-right {
+  text-align: right;
 }
 
-.display-2{
-    font-size: 16px;
+.btn {
+  padding: 15px 20px;
+  border: none;
 }
 
-.display-3{
-    font-size: 14px;
+.btn-primary {
+  border-radius: 4px;
+  background-color: var(--secondary-color);
 }
 
-.text-center{
-    text-align: center;
+.object-fit {
+  max-height: 120px;
+  height: 80px;
+  width: 80px;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
-.text-right{
-    text-align: right;
+.d-flex {
+  display: flex;
 }
 
-.btn{
-    padding: 15px 20px;
-    border: none;
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
-.btn-primary{
-    border-radius: 4px;
-    background-color: var(--secondary-color);
+.px-1 {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-.object-fit{
-    max-height: 120px;
-    height: 80px;
-    width: 80px;
-    object-fit: fill;
+.px-2 {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.d-flex{
-    display: flex;   
+.py-1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.flex-wrap{
-    flex-wrap: wrap;
+.py-2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.justify-content-center{
-    justify-content: center;
+.py-3 {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
-
-.justify-content-between{
-    justify-content: space-between;
-}
-
-.mt-2{
-    margin-top: 10px;
-}
-
-.mt-3{
-    margin-top: 50px;
-}
-
-.mb-3{
-    margin-bottom: 30px;
-}
-
-.m-0{
-    margin: 0;
-}
-
-.px-1{
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-.px-2{
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.py-1{
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.py-2{
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.py-3{
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.thumbnail{
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-}
-
-.rounded{
-    height: 120px;
-    width: 120px;
-    object-fit: fill;
-    border-radius: 99px;
-}
-
-.shadow{
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
 
 /* section styling */
- 
 /* ------- Navigation Menu ---------- */
-.navbar{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px;
+.navbar {
+  background-color: black;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 25px;
 }
 
-.nav-brand{
-    font-family: 'DM Sans', sans-serif;
-    font-weight: bold;
-    align-self: center;
-    font-size: 32px;
+.nav-brand {
+  font-family: "DM Sans", sans-serif;
+  font-weight: bold;
+  align-self: center;
+  font-size: 32px;
+  color: #50BD35;
+  text-decoration: none;
 }
 
-.collapse{
-    align-self: center;
+.navbar-nav a.active {
+  color: #50BD35;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 12px;
+  font-family: "Inconsolata";
 }
 
-.nav-link{
-    font-size: 18px;
-    margin: 12px;
-    color: var(--dark);
-    font-family: 'Poppins', sans-serif;
+.collapse {
+  align-self: center;
 }
 
-.nav-link:hover{
-    color: var(--primary-color);
+.nav-link {
+  font-size: 18px;
+  margin: 12px;
+  color: white;
+  font-family: "Inconsolata";
+  text-decoration: none;
 }
 
-.search-box{
-    display: inline;
-    border-right: 1px solid var(--secondary);
-    padding-right: 12px;
-    margin-right: 10px;
+.nav-link:hover {
+  color: var(--primary-color);
 }
 
-.toggle-button{
-    font-size: 21px;
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    right: 0;
-    margin: 8px 10px;
-    display: none;
+.search-box {
+  display: inline;
+  border-right: 1px solid var(--secondary);
+  padding-right: 12px;
+  margin-right: 10px;
 }
 
-.toggle-button:focus{
-    outline: none;
+.toggle-button {
+  font-size: 21px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 0;
+  margin: 8px 10px;
+  display: none;
 }
 
+.toggle-button:focus {
+  outline: none;
+}
 
 /* ------- .Navigation Menu ---------- */
-
 /* ----------- Main Section ---------- */
-
-#site-main{
-    margin-top: 8em;
+#site-main {
+  margin-top: 5em;
 }
 
-#posts{
-    margin-bottom: 5em;
+#posts {
+  margin-bottom: 5em;
 }
 
-.grid{
-    margin: 0 auto;
+.grid {
+  margin: 0 auto;
 }
 
-.grid .grid-item{
-    width: calc(33.3333% - 20px);
-    margin-bottom: 3em;
+.grid .grid-item {
+  width: calc(33.3333% - 20px);
+  margin-bottom: 3em;
 }
 
 /* ----------- .Main Section ---------- */
-
 /* ----------- footer ---------- */
-#footer{
-    padding-top: 4em;
+#footer {
+  padding-top: 4em;
+  background-color: black;
+  margin-top: 5%;
 }
 
-#footer .feature-post .flex-item{
-    margin-bottom: 10px;
+#footer .feature-post .flex-item {
+  margin-bottom: 10px;
 }
 
-#footer .tags a{
-    border-radius: 40px;
-    padding: 10px 20px;
-    font-size: 15px;
+#footer .tags a {
+  border-radius: 40px;
+  padding: 10px 20px;
+  font-size: 15px;
+  background-color: #33AB28;
+  color: white;
 }
 
-#footer .copyrights{
-    padding: 10px 0;
-    border-top: 2px solid var(--light);
+#footer .copyrights {
+  padding: 10px 0;
+  border-top: 2px solid var(--light);
+  margin-right: 5%;
 }
 
+.footer-title {
+  color: #33AB28;
+  font-family: "Inconsolata";
+}
+
+.text-secondary {
+  font-family: "Inconsolata";
+  font-size: 16px;
+  color: white;
+  line-height: 150%;
+}
+
+.text-primary {
+  color: #50BD35;
+}
+
+.text-title {
+  font-family: "Inconsolata";
+  font-size: 16px;
+  color: white;
+}
+
+.logo-footer {
+  width: 25%;
+}
 
 /* ----------- .footer ---------- */
-
 /* ----------- article page ------- */
-
-#post{
-    padding: 0 2em;
-    margin-bottom: 4em;
+#post {
+  padding: 0 2em;
+  margin-bottom: 4em;
 }
 
-.post-footer .post-author{
-    position: relative;
-    margin-top: 4em;
-    background-color: var(--light);
+.post-footer .post-author {
+  position: relative;
+  margin-top: 4em;
+  background-color: var(--light);
 }
 
-.post-footer .post-author::after{
-    background-color: white;
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4em;
-    z-index: 0;
+.post-footer .post-author::after {
+  background-color: white;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4em;
+  z-index: 0;
 }
 
-.post-footer .post-author .author-avatar{
-    margin: 0 auto;
-    margin-bottom: 1em;
-    position: inherit;
-    z-index: 1;
+.post-footer .post-author .author-avatar {
+  margin: 0 auto;
+  margin-bottom: 1em;
+  position: inherit;
+  z-index: 1;
 }
 
-.post-footer .post-comments .reply{
-    padding-left: 7em;
+.post-footer .post-comments .reply {
+  padding-left: 7em;
 }
 
-.form-control{
-    width: 100%;
-    border: 2px solid var(--border);
-    padding: 1em;
-    font-size: 18px;
-    margin-right: 10px;
-    font-family: 'Poppins', sans-serif;
+.form-control {
+  width: 100%;
+  border: 2px solid var(--border);
+  padding: 1em;
+  font-size: 18px;
+  margin-right: 10px;
+  font-family: "Poppins", sans-serif;
 }
 
 /* ----------- .article page ------- */
-
 /* ----------- sidebar page ------- */
-#sidebar .categories a{
-    padding: 1em 3em;
-    font-size: 18px;
-    margin-bottom: 1em;
-    background-color: var(--light);
-    border-radius: 99px;
+#sidebar .categories a {
+  padding: 1em 3em;
+  font-size: 18px;
+  margin-bottom: 1em;
+  background-color: var(--light);
+  border-radius: 99px;
 }
 
-#sidebar .categories a:hover{
-    background-color: var(--primary-color);
-    color: var(--light);
+#sidebar .categories a:hover {
+  background-color: var(--primary-color);
+  color: var(--light);
 }
 
 /* ----------- .sidebar page ------- */
-
 /* ----------- sticky ------- */
-
-.sticky{
-    position: fixed;
-    top: 0;
-    z-index: 99;
-    width: 100%;
-}
-
-.sticky + .content{
-    padding-top: 60px;
-}
-
 /* ----------- .sticky ------- */
-
-
-
 /* Media Query */
-
-.row{
-    display: flex;
+.row {
+  display: flex;
 }
 
-.col-3{
-    flex: 0 0 33.3333%;
-    max-width: 33.3333%;
-    padding-right: 35px;
+.col-3 {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  padding-right: 35px;
 }
 
-.col-8{
-    flex: 0 0 70%;
-    max-width: 70%;
+.col-8 {
+  flex: 0 0 70%;
+  max-width: 70%;
 }
 
-.col-4{
-    flex: 0 0 30%;
-    max-width: 30%;
+.col-4 {
+  flex: 0 0 30%;
+  max-width: 30%;
 }
 
+.h1 {
+  width: 220%;
+  margin: 0;
+  font-family: "Press Start 2P";
+  font-size: 42px;
+  line-height: 121.2%;
+  margin-top: 25%;
+}
 
+.h3 {
+  width: 210%;
+  margin: 0;
+  font-family: "Inconsolata";
+  font-size: 23px;
+  line-height: 150%;
+  text-align: justify;
+}
+
+.body2 {
+  background-color: #FFF942;
+}
+
+.computer {
+  width: 30%;
+  padding: 10px;
+  flex-direction: row;
+}
+
+.img-2 {
+  width: 100%;
+  justify-content: center;
+  margin-left: 11%;
+}
+
+.title-2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: "Press Start 2P";
+}
+
+.h2-2 {
+  display: flex;
+  font-family: "Plus Jakarta Sans";
+  text-align: justify;
+  margin-left: 15%;
+}
+
+.p-2 {
+  display: flex;
+  font-family: "Inconsolata";
+  margin-left: 15%;
+  text-align: justify;
+}
+
+.subtitle {
+  font-family: "inconsolata";
+  text-align: center;
+  font-size: 18px;
+}
+
+.body-3 {
+  background-color: black;
+}
+
+.navbar-3 {
+  background-color: #33AB28;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.navbar-nav-3 a.active-3 {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 12px;
+  font-family: "Inconsolata";
+}
+
+.bg-light-3 {
+  background-color: #33AB28;
+}
+
+.nav-link-3 {
+  font-size: 18px;
+  margin: 12px;
+  color: black;
+  font-family: "Inconsolata";
+  text-decoration: none;
+}
+
+.nav-brand-3 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: bold;
+  align-self: center;
+  font-size: 32px;
+  color: #50BD35;
+  text-decoration: none;
+}
+
+.nav-link-3:hover {
+  color: var(--light);
+}
+
+.title-3 {
+  color: #33AB28;
+  text-align: center;
+  font-size: 25px;
+  font-family: "Press Start 2P";
+}
+
+.h3-3 {
+  color: #50BD35;
+  width: 150%;
+  /* margin: 0; */
+  font-family: "Inconsolata";
+  font-size: 23px;
+  line-height: 150%;
+  text-align: justify;
+  margin-left: 50%;
+  margin-top: 25%;
+  border-style: dotted;
+}
+
+.img-fluid-3 {
+  height: 500px;
+  border-color: #33AB28;
+  border-style: double;
+  border-width: 7px;
+}
+
+#footer-3 {
+  padding-top: 4em;
+  background-color: #33AB28;
+  margin-top: 5%;
+}
+
+#footer3 .feature-post-3 .flex-item-3 {
+  margin-bottom: 10px;
+}
+
+.footer-title-3 {
+  color: black;
+  font-family: "Inconsolata";
+}
+
+.text-title-3 {
+  font-family: "Inconsolata";
+  font-size: 16px;
+  color: white;
+}
+
+.text-secondary-3 {
+  font-family: "Inconsolata";
+  font-size: 16px;
+  color: white;
+  line-height: 150%;
+}
+
+#footer-3 .tags-3 a {
+  border-radius: 40px;
+  padding: 10px 20px;
+  font-size: 15px;
+  background-color: black;
+  color: white;
+}
+
+.secondary-title-3 {
+  color: black;
+}
+
+.text-primary-3 {
+  color: black;
+}
+
+#footer-3 .copyrights-3 {
+  padding: 10px 0;
+  border-top: 2px solid var(--dark);
+  margin-right: 5%;
+}
+
+.subtitle-4 {
+  font-family: "inconsolata";
+  text-align: center;
+  font-size: 18px;
+  width: 70%;
+  margin-left: 14%;
+}
+
+.block-4 {
+  background-color: black;
+  width: 10%;
+  height: 10%;
+}/*# sourceMappingURL=styles.css.map */
